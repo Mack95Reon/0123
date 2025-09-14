@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Stopwatch - Tiffany Blue</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <h1 class="title">Stopwatch</h1>
+
+      <div class="display">
+        <span id="hours">00</span><span class="sep">:</span>
+        <span id="minutes">00</span><span class="sep">:</span>
+        <span id="seconds">00</span><span class="sep ms-sep">.</span>
+        <span id="millis">00</span>
+      </div>
+
+      <div class="controls">
+        <button id="startPauseBtn" class="btn primary">Start</button>
+        <button id="lapBtn" class="btn" disabled>Lap</button>
+        <button id="resetBtn" class="btn" disabled>Reset</button>
+      </div>
+
+      <ol id="laps" class="laps"></ol>
+      <template id="lapRowTemplate">
+        <li class="lap-row">
+          <span class="lap-index"></span>
+          <span class="lap-time"></span>
+          <span class="lap-split"></span>
+        </li>
+      </template>
+    </section>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
